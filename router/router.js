@@ -11,13 +11,18 @@ route.get('/', (req, res) => {
 });
 
 route.post('/search', (req, res) => {
-  var key = req.body.string;
+  let string = req.body.string;
   axios
     .get(
-      'https://api.themoviedb.org/3/search/movie?api_key=a47db61ab073e30889bcb07000a6e52c&language=en-US&query=kgf&page=1&include_adult=false'
+      `${key.SEARCH}?api_key=${
+        key.APIKEY
+      }&language=en-US&query=${string}&page=1&include_adult=false`
     )
     .then(result => {
-      res.send(circularJson.stringify(result.data.results));
+      // res.send(circularJson.stringify(result.data.results));
+      res.render('results', {
+        results: circularJson.parse(circularJson.stringify(result.data.results))
+      });
     })
     .catch(err => {
       console.log(err);
