@@ -38,21 +38,21 @@
             'https://image.tmdb.org/t/p/w600_and_h900_bestv2' %>
             <div class="col-md-12  mb-5">
               <div class="movie-result">
-                <a href="#" class="d-block mb-0 thumbnail"
+                <a href="/movie/<%= movie.id%>" class="d-block mb-0 thumbnail"
                   ><img
                     src="<%= poster+movie.poster_path%>"
                     alt="Image"
                     class="img-fluid rounded float-left"
-                    width="250px"
-                    height="350px"
                 /></a>
 
                 <div class="movie-result-body mr-1">
                   <h3 class="heading mb-0 mr-5">
-                    <a href="#"><%= movie.title%></a>
+                    <a href="/movie/<%= movie.id%>"><%= movie.title%></a>
                   </h3>
                   <strong class="date mb-5"><%= movie.release_date %></strong>
-                  <h6 class="movie-overview mt-2"><%= movie.overview %></h6>
+                  <h6 class="movie-overview mt-2">
+                    <%= helper.truncate(movie.overview) %>
+                  </h6>
                 </div>
               </div>
             </div>

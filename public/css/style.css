@@ -1920,7 +1920,7 @@ a:hover {
   color: #000;
 }
 
-.movie-result .movie-overview{
+.movie-result .movie-overview {
   color: #606061;
 }
 
@@ -1942,6 +1942,9 @@ a:hover {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
+  width:300px;
+  height:auto;
+  
 }
 .movie-result:hover {
   -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);

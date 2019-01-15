@@ -21,7 +21,24 @@ route.post('/search', (req, res) => {
     .then(result => {
       // res.send(circularJson.stringify(result.data.results));
       res.render('results', {
+        helper: require('../helper/helper'),
         results: circularJson.parse(circularJson.stringify(result.data.results))
+      });
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
+route.get('/movie/:id', (req, res) => {
+  let movie_id = req.params.id;
+
+  axios
+    .get(`${key.MOVIE}/${movie_id}?api_key=${key.APIKEY}`)
+    .then(result => {
+      // res.send(circularJson.stringify(result.data));
+      res.render('movie', {
+        movie: circularJson.parse(circularJson.stringify(result.data))
       });
     })
     .catch(err => {
