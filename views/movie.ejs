@@ -7,40 +7,105 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link rel="stylesheet" href="fonts/icomoon/style.css" />
+    <link rel="stylesheet" href="/fonts/icomoon/style.css" />
 
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/jquery-ui.css" />
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/jquery-ui.css" />
+    <link rel="stylesheet" href="/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="/css/bootstrap-datepicker.css" />
 
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
+    <link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css" />
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <div class="site-wrap">
       <%- include('includes/_navBar')%>
-      <div
-        class="site-blocks-cover overlay"
-        style="background-image: url(images/hero_3.jpeg);"
-        data-aos="fade"
-        data-stellar-background-ratio="0.5"
-      >
-        <div class="container"></div>
+      <div class="site-section bg-dark mt-6">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 mx-auto text-center mb-5 section-heading">
+              <h2 class="mb-5">Details</h2>
+            </div>
+          </div>
+          <% if (movie) {%> <% var poster =
+          'https://image.tmdb.org/t/p/w600_and_h900_bestv2' %>
+          <div
+            class="site-blocks-cover"
+            data-aos="fade"
+            data-stellar-background-ratio="0.5"
+          >
+            <div class="row">
+              <div class="col col-md-4">
+                <img
+                  src="<%= poster+movie.poster_path%>"
+                  class="text-center"
+                  alt="image"
+                  height="450px"
+                  width="300px"
+                />
+              </div>
+              <div class="col col-mid-8  mr-1">
+                <div class="mo-details">
+                  <h2><%= movie.title%></h2>
+                  <div class="mo-tagline mb-6"><%= movie.tagline%></div>
+                  <strong
+                    class="date mb-6 mt-1"
+                    data-toggle="tooltip"
+                    data-placement="right"
+                    title="Release Date"
+                    >( <%= movie.release_date%> )
+                  </strong>
+                  <div class="progrss-bar mb-3 mt-3">
+                    <h5>user review</h5>
+                    <svg
+                      class="radial-progress"
+                      data-percentage="<%= movie.vote_average%>"
+                      viewBox="0 0 80 80"
+                    >
+                      <circle
+                        class="incomplete"
+                        cx="40"
+                        cy="40"
+                        r="35"
+                      ></circle>
+                      <circle
+                        class="complete"
+                        cx="40"
+                        cy="40"
+                        r="35"
+                        style="stroke-dashoffset: 39.58406743523136;"
+                      ></circle>
+                      <text
+                        class="percentage"
+                        x="50%"
+                        y="57%"
+                        transform="matrix(0, 1, -1, 0, 80, 0)"
+                      >
+                        <%= movie.vote_average%>
+                      </text>
+                    </svg>
+                  </div>
+                  <div class="overview mb-3">
+                    movie overview:
+                    <p class="mt-1"><%= movie.overview%></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <%- include('includes/_footer')%>
+      <%};%>
     </div>
-
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/main.js"></script>
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="/js/jquery-ui.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/jquery.stellar.min.js"></script>
+    <script src="/js/jquery.magnific-popup.min.js"></script>
+    <script src="/js/aos.js"></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>

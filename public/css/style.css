@@ -1927,8 +1927,8 @@ a:hover {
 .movie-result .movie-result-body {
   padding: 30px;
 }
-.movie-result .movie-result-body .date {
-  color: #5c7893;
+.date {
+  color: #8597a8;
   font-weight: 400;
 }
 .movie-result > .thumbnail {
@@ -1942,9 +1942,8 @@ a:hover {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  width:300px;
-  height:auto;
-  
+  width: 300px;
+  height: auto;
 }
 .movie-result:hover {
   -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
@@ -1978,4 +1977,96 @@ a:hover {
 }
 .img-opacity:hover img {
   opacity: 0.5;
+}
+
+.mo-details {
+  color: #fff;
+}
+
+.mo-details h2 {
+  color: #fff;
+  font-size: 45px;
+  text-transform: uppercase;
+}
+
+.mo-details .mo-tagline {
+  color: #e6edf3;
+}
+
+/* svg progress bar */
+
+svg.radial-progress {
+  height: 95px;
+  max-width: 95px;
+  padding: 0.5em;
+  transform: rotate(-90deg);
+  width: 100%;
+}
+
+svg.radial-progress circle {
+  fill: rgba(0, 0, 0, 0);
+  stroke: #fff;
+  stroke-dashoffset: 219.91148575129; /* Circumference */
+  stroke-width: 10;
+}
+
+svg.radial-progress circle.incomplete {
+  opacity: 0.25;
+}
+
+svg.radial-progress circle.complete {
+  stroke-dasharray: 219.91148575129; /* Circumference */
+}
+
+svg.radial-progress text {
+  fill: #fff;
+  font: 400 1em/1 'Oswald', sans-serif;
+  text-anchor: middle;
+}
+
+/*** COLORS ***/
+/* Primary */
+
+svg.radial-progress:nth-of-type(6n + 1) circle {
+  stroke: #a2ed56;
+}
+
+/* Secondary */
+
+svg.radial-progress:nth-of-type(6n + 2) circle {
+  stroke: #83e4e2;
+}
+
+/* Tertiary */
+
+svg.radial-progress:nth-of-type(6n + 3) circle {
+  stroke: #fd6470;
+}
+
+/* Quaternary */
+
+svg.radial-progress:nth-of-type(6n + 4) circle {
+  stroke: #fca858;
+}
+
+/* Quinary */
+
+svg.radial-progress:nth-of-type(6n + 5) circle {
+  stroke: #fddc32;
+}
+
+.progrss-bar h5 {
+  color: #fff;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.mo-details .overview {
+  font-size: 1.2em;
+  font-weight: 200;
+}
+
+.mo-details .overview p {
+  color: #cacaca;
+  font-size: 1em;
 }
