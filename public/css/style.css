@@ -1985,8 +1985,9 @@ a:hover {
 
 .mo-details h2 {
   color: #fff;
-  font-size: 45px;
+  font-size: 40px;
   text-transform: uppercase;
+  font-weight: 400;
 }
 
 .mo-details .mo-tagline {
@@ -2069,4 +2070,8 @@ svg.radial-progress:nth-of-type(6n + 5) circle {
 .mo-details .overview p {
   color: #cacaca;
   font-size: 1em;
+}
+
+.bg-grey {
+  background-color: #636e72;
 }
