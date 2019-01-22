@@ -29,9 +29,7 @@
       <div class="site-section bg-grey">
         <div class="container">
           <div class="row">
-            <div class="col-md-12 mx-auto text-center mb-5 section-heading">
-              <h2 class="mb-5">Results</h2>
-            </div>
+            <div class="col-md-12 mx-auto text-center mb-5"></div>
           </div>
           <div class="row">
             <%if(results){%> <% results.forEach( movie => {%> <% var poster =
@@ -53,6 +51,14 @@
                   <h6 class="movie-overview mt-2">
                     <%= helper.truncate(movie.overview) %>
                   </h6>
+                  <div class="card">
+                    <a
+                      href="/movie/<%= movie.id%>"
+                      class="card-footer"
+                      style="color : #0984e3;"
+                      >View more..</a
+                    >
+                  </div>
                 </div>
               </div>
             </div>

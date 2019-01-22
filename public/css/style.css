@@ -1994,6 +1994,11 @@ a:hover {
   color: #e6edf3;
 }
 
+.mo-details .movie-link a {
+  color: #58aff1;
+  font-size: 1.3rem;
+}
+
 /* svg progress bar */
 
 svg.radial-progress {
@@ -2074,4 +2079,14 @@ svg.radial-progress:nth-of-type(6n + 5) circle {
 
 .bg-grey {
   background-color: #636e72;
+}
+
+.movie-navBar .movie-search .movie-search {
+  width: 60%;
+  height: 30px;
+  padding: 20px;
+  color: #363636;
+  background: transparent;
+  border: solid #fff 0.5px;
+  border-radius: 5px;
 }
