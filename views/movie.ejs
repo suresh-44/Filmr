@@ -86,9 +86,11 @@
                   movie overview:
                   <p class="mt-1"><%= movie.overview%></p>
                 </div>
+                <% if (movie.homepage)%>
                 <div class="movie-link">
                   <a href="<%= movie.homepage%>">Home page</a>
                 </div>
+                <%};%>
               </div>
             </div>
             <%};%>
